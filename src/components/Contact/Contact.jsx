@@ -6,8 +6,31 @@ import location_icon from "../../assets/location_icon.png";
 import call_icon from "../../assets/call_icon.png";
 
 const Conect = () => {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "c79b38f9-6b5d-4391-99e7-c10a4bc98067");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    }).then((res) => res.json());
+
+    if (res.success) {
+      alert(res.message);
+    }
+  };
+
   return (
-    <div className="conect">
+    <div id="contact" className="conect">
       <div className="conect-title">
         <h1>Get in touh</h1>
         <img src={fireAbout} alt="" />
@@ -31,7 +54,7 @@ const Conect = () => {
             </div>
           </div>
         </div>
-        <form className="contact-right">
+        <form onSubmit={onSubmit} className="contact-right">
           <label htmlFor="">Your Name</label>
           <input type="text" placeholder="Enter your name" name="name" />
           <label htmlFor="">Your Email</label>

@@ -4,7 +4,7 @@ import fireAbout from "../../assets/fire-About.png";
 import draAbout from "../../assets/dragon-About.png";
 const About = () => {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="about-title">
         <h1>About me</h1>
         <img src={fireAbout} alt="" />

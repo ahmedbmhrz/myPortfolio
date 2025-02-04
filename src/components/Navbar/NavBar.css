@@ -24,9 +24,23 @@
     background:linear-gradient(270deg,#840000 0.36%,rgb(255, 65, 85) 102.06%);
     font-size: 22px;
     cursor: pointer;
-    transition: 0.5s;
+    transition: 0.5s;   
 }
 
 .nav-connect:hover{
     transform: scale(1.05);
+}
+
+
+.nav-menu p:hover{
+    background: linear-gradient(270deg,#cc0000 0.36%,rgb(252, 95, 110) 102.06%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.anchor-link{
+    text-decoration: none;
+    color: whitesmoke   ;
 }
