@@ -69,3 +69,33 @@
     margin-top: 9px;
 }
 
+@media(max-width:768px){
+    .mywork{
+        gap: 50px;
+        margin: 50px 70px;
+        align-items: start;
+    }
+    .mywork-title h1{
+        padding: 0;
+        font-size: 50px;
+        font-weight: 600;
+    }
+    .mywork-title img{
+        height: 70px;   
+        width: 70px;
+        right: -20px;
+    }
+    .mywork-container{
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    .mywork-container img{
+        width: 100%;
+        height: 100%;
+    }
+    .mywork-showmore{
+        padding: 20px 40px;
+        font-size: 18px;
+        margin: 50px auto;
+    }
+}
